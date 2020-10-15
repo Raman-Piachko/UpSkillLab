@@ -21,12 +21,14 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:github/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22a7695-86de-4420-8ae9-43affca18612" name="Default Changelist" comment="" />
+    <list default="true" id="c22a7695-86de-4420-8ae9-43affca18612" name="Default Changelist" comment="ignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +81,14 @@
       <option name="presentableId" value="Default" />
       <updated>1602693536678</updated>
     </task>
+    <task id="LOCAL-00001" summary="ignore">
+      <created>1602793554283</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602793554283</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -96,37 +106,38 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="github/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1602693640628">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1602693640628" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1602794509025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602794509025" />
+    <state x="129" y="55" key="DiffContextDialog" timestamp="1602794506927">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1602794506927" />
     <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1602792920454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602792920454" />
-    <state x="558" y="262" width="360" height="204" key="Github.ShareDialog" timestamp="1602694414707">
+    <state x="558" y="262" width="360" height="204" key="Github.ShareDialog" timestamp="1602793983081">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="558" y="262" width="360" height="204" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1602694414707" />
+    <state x="558" y="262" width="360" height="204" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1602793983081" />
     <state x="466" y="62" key="Github.UntrackedFilesDialog" timestamp="1602694425706">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -147,13 +158,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="661" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602699706113" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1602693975828">
+    <state x="450" y="20" width="916" height="708" key="SettingsEditor" timestamp="1602794787726">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1602693975828" />
+    <state x="450" y="20" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1602794787726" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1602793425878">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602793425878" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602792675927">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1602792675927" />
+    <state x="463" y="169" key="git4idea.history.wholeTree.VcsStructureChooser" timestamp="1602794722834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="169" key="git4idea.history.wholeTree.VcsStructureChooser/0.0.1366.728@0.0.1366.728" timestamp="1602794722834" />
+    <state x="513" y="155" key="svn.repositoryBrowser" timestamp="1602794591328">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="513" y="155" key="svn.repositoryBrowser/0.0.1366.728@0.0.1366.728" timestamp="1602794591328" />
   </component>
 </project>
