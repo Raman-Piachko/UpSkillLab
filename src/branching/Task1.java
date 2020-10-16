@@ -3,7 +3,7 @@ package branching;
 public class Task1 {
 
     public static void main(String[] args) {
-        System.out.println(me(120,90));
+        System.out.println(testTreangle(120,90));
     }
 
     public static boolean isItTreangle(double a, double b) {
@@ -14,7 +14,7 @@ public class Task1 {
         return (180 - a - b == 90);
     }
 
-    public static String me(double a, double b) {
+    public static String testTreangle(double a, double b) {
         if (isItTreangle(a, b)) {
             if (isTriangleRightAngled(a, b)) {
                 return "It is right treangle";
