@@ -1,4 +1,4 @@
-package branching;
+package com.epam.task.branching;
 
 public class Task4 {
 

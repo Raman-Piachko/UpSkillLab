@@ -1,6 +1,4 @@
-package entity;
-
-import branching.Task3;
+package com.epam.task.entity;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
-package utils;
+package com.epam.task.util;
 
-import entity.Point;
+import com.epam.task.entity.Point;
 
 public class PointsCheck {
     public static boolean isPointsOnLine(Point one, Point two, Point three){

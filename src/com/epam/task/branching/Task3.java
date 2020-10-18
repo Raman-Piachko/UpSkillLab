@@ -1,7 +1,7 @@
-package branching;
+package com.epam.task.branching;
 
-import entity.Point;
-import utils.PointsCheck;
+import com.epam.task.entity.Point;
+import com.epam.task.util.PointsCheck;
 
 public class Task3 {
 

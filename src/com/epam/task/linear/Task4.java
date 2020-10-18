@@ -1,6 +1,4 @@
-package linearPrograms;
-
-import java.util.Arrays;
+package com.epam.task.linear;
 
 public class Task4 {
 
@@ -14,8 +12,8 @@ public class Task4 {
     }
 
     public static double swapPartsOfNumberByString(double a) {
-        String stringOfnumbers = Double.toString(a);
-        String[] oldNum = stringOfnumbers.split("\\.");
+        String stringOfNumbers = Double.toString(a);
+        String[] oldNum = stringOfNumbers.split("\\.");
         String[] newNum = new String[oldNum.length];
         for (int i = oldNum.length - 1; i > 0; ) {
             for (int j = 0; j < oldNum.length; j++) {
@@ -23,11 +21,6 @@ public class Task4 {
                 i--;
             }
         }
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < newNum.length; i++) {
-            if (i != newNum.length - 1) stringBuilder.append(newNum[i]).append(".");
-            else stringBuilder.append(newNum[i]);
-        }
-        return Double.parseDouble(stringBuilder.toString());
+        return Double.parseDouble(newNum[0] + "." + newNum[1]);
     }
 }

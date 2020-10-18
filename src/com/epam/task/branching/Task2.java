@@ -1,4 +1,4 @@
-package branching;
+package com.epam.task.branching;
 
 public class Task2 {
     //Найти max{min(a, b), min(c, d)}
@@ -8,8 +8,8 @@ public class Task2 {
     }
 
     public static int calculateValue(int a, int b, int c, int d) {
-        int result = Math.max((Math.min(a, b)), (Math.min(c, d)));
-        return result;
+        return Math.max((Math.min(a, b)), (Math.min(c, d)));
+
     }
     public static int calculateValueOtherMethod(int p, int q, int r, int s) {
         return ((p <= q) ? p : q) >= ((r <= s) ? r : s) ? ((p <= q) ? p : q ): (r <= s) ? r : s;

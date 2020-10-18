@@ -1,4 +1,4 @@
-package branching;
+package com.epam.task.branching;
 
 public class Task1 {
 
@@ -18,9 +18,9 @@ public class Task1 {
         if (isItTreangle(a, b)) {
             if (isTriangleRightAngled(a, b)) {
                 return "It is right treangle";
-            } else return "It is treangle, but it i not right treangle";
+            } else {return "It is treangle, but it i not right treangle";}
 
-        }else return "It is not triangle";
+        }else {return "It is not triangle";}
 
     }
 }
