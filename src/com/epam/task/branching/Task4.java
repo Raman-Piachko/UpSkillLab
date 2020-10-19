@@ -7,7 +7,7 @@ public class Task4 {
     }
 
     public static boolean brickHasValidSize(double openingHeight, double openingWidth, double brickHigh, double brickWidth, double brickLenght) {
-        return ((openingHeight > brickHigh) && (openingWidth > brickWidth) || (openingHeight > brickWidth) && (openingWidth > brickHigh) || (openingHeight > openingHeight) && (openingWidth > brickLenght) || (openingHeight > brickLenght) && (openingWidth > openingHeight) || (openingHeight > brickLenght) && (openingWidth > brickWidth) || (openingHeight > brickWidth) && (openingWidth > brickLenght));
+        return (((openingHeight > brickHigh) && (openingWidth > brickWidth)) || ((openingHeight > brickWidth) && (openingWidth > brickHigh)) || ((openingHeight > openingHeight) && (openingWidth > brickLenght)) || ((openingHeight > brickLenght) && (openingWidth > openingHeight)) || ((openingHeight > brickLenght) && (openingWidth > brickWidth)) || ((openingHeight > brickWidth) && (openingWidth > brickLenght)));
     }
 
 }

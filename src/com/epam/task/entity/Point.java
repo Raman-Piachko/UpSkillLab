@@ -3,35 +3,35 @@ package com.epam.task.entity;
 import java.util.Objects;
 
 public class Point {
-    private double firstAngle;
-    private double secondAngle;
+    private double x;
+    private double y;
 
-    public Point(double firstAngle, double secondAngle) {
-        this.firstAngle = firstAngle;
-        this.secondAngle = secondAngle;
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public double getFirstAngle() {
-        return firstAngle;
+    public double getX() {
+        return x;
     }
 
-    public void setFirstAngle(double firstAngle) {
-        this.firstAngle = firstAngle;
+    public void setX(double x) {
+        this.x = x;
     }
 
-    public double getSecondAngle() {
-        return secondAngle;
+    public double getY() {
+        return y;
     }
 
-    public void setSecondAngle(double secondAngle) {
-        this.secondAngle = secondAngle;
+    public void setY(double y) {
+        this.y = y;
     }
 
     @Override
     public String toString() {
         return "Point{" +
-                "x=" + firstAngle +
-                ", y=" + secondAngle +
+                "x=" + x +
+                ", y=" + y +
                 '}';
     }
 
@@ -40,13 +40,13 @@ public class Point {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Point point = (Point) o;
-        return Double.compare(point.firstAngle, firstAngle) == 0 &&
-                Double.compare(point.secondAngle, secondAngle) == 0;
+        return Double.compare(point.x, y) == 0 &&
+                Double.compare(point.y, y) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstAngle, secondAngle);
+        return Objects.hash(x, y);
     }
 
 }
