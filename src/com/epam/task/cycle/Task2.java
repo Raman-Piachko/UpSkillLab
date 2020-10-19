@@ -6,9 +6,10 @@ public class Task2 {
             for (x = a; x <= b; x += h) {
                 System.out.printf("x= %d, y= %d\n", x, x);
             }
-        }
-        for (x = a; x <= b; x += h) {
-            System.out.printf("x= %d, y= %d\n", x, -x);
+        } else {
+            for (x = a; x <= b; x += h) {
+                System.out.printf("x= %d, y= %d\n", x, -x);
+            }
         }
     }
 

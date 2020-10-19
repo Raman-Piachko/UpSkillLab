@@ -4,7 +4,7 @@ package com.epam.task.cycle;
 import java.util.Scanner;
 
 public class Task7 {
-    public static void findSameNum() {
+    public static void findSameNumbers() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number ");
         int a = scanner.nextInt();
@@ -25,6 +25,6 @@ public class Task7 {
     }
 
     public static void main(String[] args) {
-        findSameNum();
+        findSameNumbers();
     }
 }
