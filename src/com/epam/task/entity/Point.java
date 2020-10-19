@@ -40,13 +40,11 @@ public class Point {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Point point = (Point) o;
-        return Double.compare(point.x, x) == 0 &&
-                Double.compare(point.y, y) == 0;
+        return (x == point.x && y == point.y);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
     }
-
 }

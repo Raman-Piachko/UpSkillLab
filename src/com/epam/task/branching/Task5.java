@@ -7,11 +7,12 @@ public class Task5 {
     }
 
     public static double calculateValueByX(double x) {
+        double y;
         if (x <= 3) {
-            x = (x * x) - (3 * x) + 9;
+            y = (Math.pow(x,2)) - (3 * x) + 9;
         } else {
-            x = 1 / ((x * x * x) + 6);
+            y = 1 / (Math.pow(x,3) + 6);
         }
-        return x;
+        return y;
     }
 }
