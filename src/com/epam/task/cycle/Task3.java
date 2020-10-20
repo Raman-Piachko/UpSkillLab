@@ -8,10 +8,10 @@ public class Task3 {
     }
 
     public static int calculateSum() {
-        int calculateSum = 0;
+        int calculatedSum = 0;
         for (int i = 0; i <= 100; i++) {
-            calculateSum += pow(i, 2);
+            calculatedSum += pow(i, 2);
         }
-        return calculateSum;
+        return calculatedSum;
     }
 }

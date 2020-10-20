@@ -6,11 +6,11 @@ public class Task4 {
     }
 
     public static double calculateSum() {
-        long summ = 1L;
+        long calculatedSum = 1L;
         for (int i = 1; i <= 200; i++) {
-            summ *= Math.pow(i, 2);
+            calculatedSum *= Math.pow(i, 2);
         }
-        return summ;
+        return calculatedSum;
 
     }
 }
