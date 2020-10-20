@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        System.out.println(calculateValue());
+        System.out.println(calculateSum());
     }
 
-    public static int calculateValue() {
+    public static int calculateSum() {
         System.out.println("Enter an integer");
         Scanner scanner = new Scanner(System.in);
         int segmentEnd = scanner.nextInt();

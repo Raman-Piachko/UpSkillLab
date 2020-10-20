@@ -1,7 +1,7 @@
 package com.epam.task.cycle;
 
 public class Task5 {
-    private static final String STRING = "qwe24@1";
+    private static final String TEST_STRING = "qwe24@1";
 
     public static void main(String[] args) {
        // convertNumToChar();
@@ -15,7 +15,7 @@ public class Task5 {
     }
 
     public static void convertStringToInt() {
-        char[] array = STRING.toCharArray();
+        char[] array = TEST_STRING.toCharArray();
         for (char c : array) {
             System.out.printf("%s : %d\n", c, (int) c);
         }
