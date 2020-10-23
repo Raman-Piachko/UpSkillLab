@@ -1,23 +1,18 @@
 package com.epam.task.arrays;
 
 import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+
+import static com.epam.task.util.ArrayUtil.createArray;
+import static com.epam.task.util.ArrayUtil.fillArray;
+
 
 public class Task4 {
     public static void main(String[] args) {
-        changeMaxMin();
+        int[] a = fillArray(createArray());
+        changeMaxMin(a);
     }
 
-    public static void changeMaxMin() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter array length ");
-        int arrayLength = scanner.nextInt();
-        int[] array = new int[arrayLength];
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (random.nextInt(10) - 2);
-        }
+    public static void changeMaxMin(int[] array) {
         System.out.println(Arrays.toString(array));
         int maxElement = array[0];
         int minElement = array[0];

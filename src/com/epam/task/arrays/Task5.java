@@ -1,25 +1,19 @@
 package com.epam.task.arrays;
 
 import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+
+import static com.epam.task.util.ArrayUtil.createArray;
+import static com.epam.task.util.ArrayUtil.fillArray;
 
 public class Task5 {
     public static void main(String[] args) {
-        printNumbers();
+        int[] array = fillArray(createArray());
+        printNumbers(array);
     }
 
-    public static void printNumbers() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter array length ");
-        int arrayLength = scanner.nextInt();
-        int[] array = new int[arrayLength];
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (random.nextInt(10) + 2);
-        }
+    public static void printNumbers(int[] array) {
         System.out.println(Arrays.toString(array));
-        for (int i = 0; i < arrayLength; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] > i) {
                 System.out.printf("%d, ", array[i]);
             }

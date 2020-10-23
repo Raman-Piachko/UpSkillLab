@@ -1,27 +1,21 @@
 package com.epam.task.arrays;
 
 import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+
+import static com.epam.task.util.ArrayUtil.createArray;
+import static com.epam.task.util.ArrayUtil.fillArray;
 
 public class Task7 {
     public static void main(String[] args) {
-        calculateMaxSum();
+        int[] array = fillArray(createArray());
+        calculateMaxSum(array);
     }
 
-    public static void calculateMaxSum() {    //я выводил наибольшую сумму из сумм крайних элементов и к середине массива
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter array length ");
-        int arrayLength = scanner.nextInt();
-        int[] array = new int[arrayLength];
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (random.nextInt(10) + 2);
-        }
+    public static void calculateMaxSum(int[] array) {    //я выводил наибольшую сумму из сумм крайних элементов и к середине массива
         System.out.println(Arrays.toString(array));
-        int maxSum = array[0] + array[arrayLength - 1];
-        for (int i = 0; i < arrayLength; i++) {
-            int temp = array[i] + array[arrayLength - 1 - i];
+        int maxSum = array[0] + array[array.length - 1];
+        for (int i = 0; i < array.length; i++) {
+            int temp = array[i] + array[array.length - 1 - i];
             if (temp >= maxSum) {
                 maxSum = temp;
             }

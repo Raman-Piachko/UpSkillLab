@@ -1,12 +1,25 @@
 package com.epam.task.arrays;
 
 import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+
+import static com.epam.task.util.ArrayUtil.createArray;
+import static com.epam.task.util.ArrayUtil.fillArray;
 
 public class Task6 {
     public static void main(String[] args) {
-        calculateSum();
+        int[] array = fillArray(createArray());
+        calculateSum(array);
+    }
+
+    public static void calculateSum(int[] array) {
+        System.out.println(Arrays.toString(array));
+        int calculatedSum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (isPrimeNumber(i)) {
+                calculatedSum += array[i];
+            }
+        }
+        System.out.printf("Sum: %d", calculatedSum);
     }
 
     public static boolean isPrimeNumber(int x) {
@@ -22,23 +35,6 @@ public class Task6 {
         return true;
     }
 
-    public static void calculateSum() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter array length ");
-        int arrayLength = scanner.nextInt();
-        int[] array = new int[arrayLength];
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (random.nextInt(10) + 2);
-        }
-        System.out.println(Arrays.toString(array));
-        int calculatedSum = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (isPrimeNumber(i)) {
-                calculatedSum += array[i];
-            }
-        }
-        System.out.printf("Sum: %d", calculatedSum);
-    }
+
 }
 
