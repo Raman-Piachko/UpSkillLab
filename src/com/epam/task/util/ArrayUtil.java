@@ -1,7 +1,8 @@
 package com.epam.task.util;
 
 import java.util.Random;
-import java.util.Scanner;
+
+import static com.epam.task.util.InputUtils.inputIntValue;
 
 public class ArrayUtil {
     public static int[] fillArray(int[] array) {
@@ -19,11 +20,7 @@ public class ArrayUtil {
         return new int[arrayLength];
     }
 
-    public static int inputIntValue(String message) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(message);
-        return scanner.nextInt();
-    }
+
 
 
 }

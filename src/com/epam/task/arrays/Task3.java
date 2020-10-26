@@ -7,8 +7,8 @@ import static com.epam.task.util.ArrayUtil.fillArray;
 
 public class Task3 {
     public static void main(String[] args) {
-        int[] a = fillArray(createArray());
-        calculateValue(a);
+        int[] array = fillArray(createArray());
+        calculateValue(array);
     }
 
     public static void calculateValue(int[] array) {
@@ -20,7 +20,7 @@ public class Task3 {
                 zeroCounter++;
             } else if (j > 0) {
                 positiveCounter++;
-            } else negativeCounter++;
+            } else {negativeCounter++;}
         }
         System.out.println(Arrays.toString(array));
         System.out.printf("Negative numbers - %d, zero - %d, positive numbers - %d", negativeCounter, zeroCounter, positiveCounter);

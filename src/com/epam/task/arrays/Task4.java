@@ -8,8 +8,8 @@ import static com.epam.task.util.ArrayUtil.fillArray;
 
 public class Task4 {
     public static void main(String[] args) {
-        int[] a = fillArray(createArray());
-        changeMaxMin(a);
+        int[] array = fillArray(createArray());
+        changeMaxMin(array);
     }
 
     public static void changeMaxMin(int[] array) {

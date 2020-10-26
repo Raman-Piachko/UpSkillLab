@@ -2,7 +2,9 @@ package com.epam.task.arrays;
 
 import java.util.Arrays;
 
-import static com.epam.task.util.ArrayUtil.*;
+import static com.epam.task.util.ArrayUtil.createArray;
+import static com.epam.task.util.ArrayUtil.fillArray;
+import static com.epam.task.util.InputUtils.inputIntValue;
 
 public class Task2 {
     public static void main(String[] args) {
