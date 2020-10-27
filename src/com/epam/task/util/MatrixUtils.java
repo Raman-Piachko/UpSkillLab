@@ -31,9 +31,9 @@ public class MatrixUtils {
     }
 
     public static void printMatrix(int[][] matrix) {
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                System.out.printf("%d  ", anInt);
+        for (int[] i : matrix) {
+            for (int j : i) {
+                System.out.printf("%d  ", j);
             }
             System.out.println();
         }

@@ -1,6 +1,8 @@
 package com.epam.task.matrix;
 
-import static com.epam.task.util.MatrixUtils.*;
+
+import static com.epam.task.util.MatrixUtils.createSquareMatrix;
+import static com.epam.task.util.MatrixUtils.fillMatrix;
 
 public class Task10 {
     public static void main(String[] args) {

@@ -1,7 +1,9 @@
 package com.epam.task.matrix;
 
 import static com.epam.task.util.InputUtils.inputIntValue;
-import static com.epam.task.util.MatrixUtils.*;
+import static com.epam.task.util.MatrixUtils.createMatrix;
+import static com.epam.task.util.MatrixUtils.fillMatrix;
+
 
 public class Task8 {
     public static void main(String[] args) {
