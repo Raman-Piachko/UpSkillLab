@@ -16,18 +16,18 @@ public class Task2 {
 
     public static void selectionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            int min = array[i];
-            int minId = i;
+            int minValue = array[i];
+            int minIndex = i;
             for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < min) {
-                    min = array[j];
-                    minId = j;
+                if (array[j] < minValue) {
+                    minValue = array[j];
+                    minIndex = j;
                 }
             }
 
             int temp = array[i];
-            array[i] = min;
-            array[minId] = temp;
+            array[i] = minValue;
+            array[minIndex] = temp;
         }
     }
 }
