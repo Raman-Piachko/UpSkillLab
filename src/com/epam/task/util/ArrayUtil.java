@@ -20,7 +20,10 @@ public class ArrayUtil {
         return new int[arrayLength];
     }
 
-
-
+    public static void swapElement(int[] array, int a, int b) {
+        int temp = array[b];
+        array[b] = array[a];
+        array[a] = temp;
+    }
 
 }

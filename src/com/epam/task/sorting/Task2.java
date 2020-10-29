@@ -2,8 +2,7 @@ package com.epam.task.sorting;
 
 import java.util.Arrays;
 
-import static com.epam.task.util.ArrayUtil.createArray;
-import static com.epam.task.util.ArrayUtil.fillArray;
+import static com.epam.task.util.ArrayUtil.*;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -24,13 +23,8 @@ public class Task2 {
                     minIndex = j;
                 }
             }
-            changeElement(i, array, minIndex, minValue);
+            swapElement(array, i, minIndex);
         }
     }
 
-    public static void changeElement(int i, int[] array, int minIndex, int minValue) {
-        int temp = array[i];
-        array[i] = minValue;
-        array[minIndex] = temp;
-    }
 }
