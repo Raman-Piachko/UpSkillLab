@@ -24,10 +24,13 @@ public class Task2 {
                     minIndex = j;
                 }
             }
-
-            int temp = array[i];
-            array[i] = minValue;
-            array[minIndex] = temp;
+            changeElement(i, array, minIndex, minValue);
         }
+    }
+
+    public static void changeElement(int i, int[] array, int minIndex, int minValue) {
+        int temp = array[i];
+        array[i] = minValue;
+        array[minIndex] = temp;
     }
 }
