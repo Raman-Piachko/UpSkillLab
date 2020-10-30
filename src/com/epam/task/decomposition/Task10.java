@@ -8,7 +8,7 @@ public class Task10 {
     }
 
     public static int[] createNumbersArray(int n) {
-        int[] numbersArray = new int[findLengthOfNumber(n)];
+        int[] numbersArray = new int[calculateLengthOfNumber(n)];
         while (n > 0) {
             for (int i = numbersArray.length - 1; i >= 0; i--) {
                 int l = n % 10;
@@ -33,7 +33,7 @@ public class Task10 {
         return Arrays.copyOf(array, lengthOfRepeatingElements);
     }
 
-    public static int findLengthOfNumber(int n) {
+    public static int calculateLengthOfNumber(int n) {
         int length = 0;
         long temp = 1;
         while (temp <= n) {
