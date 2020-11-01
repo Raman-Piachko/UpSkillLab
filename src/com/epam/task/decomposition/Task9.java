@@ -6,7 +6,7 @@ import static java.lang.Math.sqrt;
 
 public class Task9 {
     public static void main(String[] args) {
-        System.out.println(calculateSquareQuadrangle(3, 5, 6.04, 6.27));
+        System.out.println(calculateSquareQuadrangle(2, 4, 7.22, 7.2));
     }
 
     public static double calculateSquareQuadrangle(double x, double y, double z, double t) {
@@ -21,14 +21,14 @@ public class Task9 {
         return square;
     }
 
-    public static double calculateBisector(double x, double y) {
+    public static double calculateHypotenuse(double x, double y) {
         return sqrt((pow(x, 2)) + (pow(y, 2)));
     }
 
 
     public static double calculateAngle(double x, double y, double z, double t) {
-        double bisector = calculateBisector(x, y);
-        double cosAngle = ((pow(z, 2) + pow(t, 2)) - pow(bisector, 2)) / (2 * z * t);
+        double hypotenuse = calculateHypotenuse(x, y);
+        double cosAngle = ((pow(z, 2) + pow(t, 2)) - pow(hypotenuse, 2)) / (2 * z * t);
         return acos(cosAngle);
 
     }
@@ -38,14 +38,14 @@ public class Task9 {
     }
 
     public static double calculateTriangleSquare(double x, double y, double z, double t) {
-        double bisector = calculateBisector(x, y);
+        double hypotenuse = calculateHypotenuse(x, y);
         double halfPerimeterTriangle = calculateHalfPerimeterTriangle(x, y, z, t);
-        return sqrt(halfPerimeterTriangle * (halfPerimeterTriangle - z) * (halfPerimeterTriangle - t) * (halfPerimeterTriangle - bisector));
+        return sqrt(halfPerimeterTriangle * (halfPerimeterTriangle - z) * (halfPerimeterTriangle - t) * (halfPerimeterTriangle - hypotenuse));
     }
 
     public static double calculateHalfPerimeterTriangle(double x, double y, double z, double t) {
-        double bisector = calculateBisector(x, y);
-        return ((z + t + bisector) / 2);
+        double hypotenuse = calculateHypotenuse(x, y);
+        return ((z + t + hypotenuse) / 2);
     }
 
 }

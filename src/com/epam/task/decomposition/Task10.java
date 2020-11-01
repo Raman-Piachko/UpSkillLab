@@ -16,10 +16,10 @@ public class Task10 {
                 numbersArray[i] = l;
             }
         }
-        return filtArray(numbersArray);
+        return filterArray(numbersArray);
     }
 
-    public static int[] filtArray(int[] array) {
+    public static int[] filterArray(int[] array) {
         int lengthOfRepeatingElements = array.length;
         for (int i = 0; i < lengthOfRepeatingElements; i++) {
             for (int j = i + 1; j < lengthOfRepeatingElements; j++) {
@@ -33,10 +33,10 @@ public class Task10 {
         return Arrays.copyOf(array, lengthOfRepeatingElements);
     }
 
-    public static int calculateLengthOfNumber(int n) {
+    public static int calculateLengthOfNumber(int number) {
         int length = 0;
         long temp = 1;
-        while (temp <= n) {
+        while (temp <= number) {
             length++;
             temp *= 10;
         }

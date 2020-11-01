@@ -1,18 +1,38 @@
 package com.epam.task.decomposition;
 
+import java.util.Arrays;
+
+import static com.epam.task.util.ArrayUtil.createArray;
+
 public class Task12 {
+
     public static void main(String[] args) {
-            findTwinsNumbers(41);
+        int[] array = createArray();
+        System.out.println(Arrays.toString(fillArrayByExample(array, 7, 128)));
     }
 
-    public static void findTwinsNumbers(int number) { //добавить проверку на isSimpleNumber() где-то уже был;
-
-        for (int i = number; i <=number*2; i++) {
-            for (int j = i; j < number*2; j++) {
-                if(j-i==2){
-                    System.out.println(i+"  "+j);
-                }
+    public static int[] fillArrayByExample(int[] array, int k, int n) {
+        int temp = 0;
+        int number = 1;
+        while (number != n) {
+            if (calculateSumOfDigits(number) == k && temp < array.length) {
+                array[temp] = number;
+                temp++;
             }
+            number++;
         }
+
+        return array;
     }
+
+    public static int calculateSumOfDigits(int number) {
+        int sumOfDigits = 0;
+        while (number != 0) {
+            sumOfDigits += number % 10;
+            number = number / 10;
+        }
+        return sumOfDigits;
+    }
+
+
 }
