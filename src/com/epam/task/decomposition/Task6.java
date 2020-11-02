@@ -1,6 +1,6 @@
 package com.epam.task.decomposition;
 
-import static com.epam.task.decomposition.Task1.findNOD;
+import static com.epam.task.util.NumberUtils.findNOD;
 
 public class Task6 {
     public static void main(String[] args) {

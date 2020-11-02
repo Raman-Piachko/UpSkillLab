@@ -16,20 +16,20 @@ public class Task8 {
         int sum3 = 0;
         for (int i = 0; i < array.length; i++) {
             if (i == 0) {
-                sum1 = calculateThreeElements(i, array);
+                sum1 = calculateSumOfThreeElements(i, array);
             }
             if (i == 2) {
-                sum2 = calculateThreeElements(i, array);
+                sum2 = calculateSumOfThreeElements(i, array);
             }
             if (i == 3) {
-                sum3 = calculateThreeElements(i, array);
+                sum3 = calculateSumOfThreeElements(i, array);
             }
         }
 
         System.out.printf("Result = %d, %d, %d", sum1, sum2, sum3);
     }
 
-    public static int calculateThreeElements(int i, int[] array) {
+    public static int calculateSumOfThreeElements(int i, int[] array) {
         return array[i] + array[i + 1] + array[i + 2];
     }
 

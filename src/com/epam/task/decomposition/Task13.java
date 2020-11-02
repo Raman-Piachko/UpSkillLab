@@ -8,10 +8,9 @@ public class Task13 {
     }
 
     public static void findTwinsNumbers(int number) {
-
         for (int i = number; i <= number * 2; i++) {
             for (int j = i; j < number * 2; j++) {
-                if ( j - i == 2 && isPrimeNumber(i)&&isPrimeNumber(j)){
+                if (j - i == 2 && isPrimeNumber(i) && isPrimeNumber(j)) {
                     System.out.println(i + "  " + j);
                 }
             }

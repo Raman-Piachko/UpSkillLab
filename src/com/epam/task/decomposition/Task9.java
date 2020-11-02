@@ -11,11 +11,11 @@ public class Task9 {
 
     public static double calculateSquareQuadrangle(double x, double y, double z, double t) {
         double square = 0;
-        double forthAngle = calculateAngle(x, y, z, t);
-        if (forthAngle < 180) {
+        double fourthAngle = calculateAngle(x, y, z, t);
+        if (fourthAngle < 180) {
             square = calculateRightTriangleSquare(x, y) + calculateTriangleSquare(x, y, z, t);
         }
-        if (forthAngle > 180) {
+        if (fourthAngle > 180) {
             square = calculateRightTriangleSquare(x, y) - calculateTriangleSquare(x, y, z, t);
         }
         return square;

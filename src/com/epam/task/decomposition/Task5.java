@@ -16,7 +16,6 @@ public class Task5 {
 
     public static void findPreviousMaxElement(int[] array) {
         bubbleSort(array);
-        System.out.println(Arrays.toString(array));
         for (int i = array.length - 1; i >= 0; i--) {
             if (array[i] < array[array.length - 1]) {
                 System.out.printf("Previous max element = %d", array[i]);

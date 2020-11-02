@@ -10,10 +10,10 @@ public class Task4 {
         calculateDistance(points);
     }
 
-    public static int[][] createPointsArray(int n) {
-        int[][] point = new int[n][2];
-        fillMatrix(point);
-        return point;
+    public static int[][] createPointsArray(int numberOfPoints) {
+        int[][] pointsArray = new int[numberOfPoints][2];
+        fillMatrix(pointsArray);
+        return pointsArray;
     }
 
     public static void calculateDistance(int[][] points) {
@@ -21,12 +21,12 @@ public class Task4 {
         String firstPoint = null;
         String secondPoint = null;
         for (int i = 0; i < points.length; i++) {
-            for (int m = i; m < points.length - 1; m++) {
-                double distance = calculateDistance(points[i][0], points[m + 1][0], points[i][1], points[m + 1][1]);
+            for (int j = i; j < points.length - 1; j++) {
+                double distance = calculateDistance(points[i][0], points[j + 1][0], points[i][1], points[j + 1][1]);
                 if (distance > maxDistance) {
                     maxDistance = distance;
                     firstPoint = "(" + points[i][0] + ":" + points[i][1] + ")";
-                    secondPoint = "(" + points[m + 1][0] + ":" + points[m + 1][1] + ")";
+                    secondPoint = "(" + points[j + 1][0] + ":" + points[j + 1][1] + ")";
                 }
             }
         }
@@ -34,8 +34,8 @@ public class Task4 {
         System.out.println(secondPoint);
     }
 
-    public static double calculateDistance(double x, double x1, double y, double y1) {
-        return sqrt(pow(x - x1, 2) + pow(y - y1, 2));
+    public static double calculateDistance(double pointX, double point1X, double pointY, double point1Y) {
+        return sqrt(pow(pointX - point1X, 2) + pow(pointY - point1Y, 2));
     }
 
 }
