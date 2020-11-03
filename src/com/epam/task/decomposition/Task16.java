@@ -1,6 +1,7 @@
 package com.epam.task.decomposition;
 
-import static com.epam.task.util.NumberUtils.createArrayOfDigits;
+import static com.epam.task.decomposition.Task15.createArrayOfDigits;
+import static com.epam.task.util.NumberUtils.isOdd;
 
 public class Task16 {
 
@@ -11,40 +12,41 @@ public class Task16 {
         System.out.println(countEvenDigitsInSumOfOddDigits);
     }
 
-    public static boolean isOddDigitsInNumber(int number) {
-        int[] arrayOfDigits = createArrayOfDigits(number);
-        int countOddDigits = 0;
-        for (int arrayOfDigit : arrayOfDigits) {
-            if (isOdd(arrayOfDigit)) {
-                countOddDigits++;
-            }
-        }
-        return (countOddDigits == arrayOfDigits.length);
-    }
-
-    public static boolean isOdd(int digit) {
-        return ((digit + 1) % 2 == 0);
-    }
-
-    public static int calculateSumOfNumbersWithOnlyOddDigits(int startValue, int endValue) {
+    private static int calculateSumOfNumbersWithOnlyOddDigits(int startValue, int endValue) {
         int sum = 0;
+
         for (int i = startValue; i <= endValue; i++) {
             if (isOddDigitsInNumber(i)) {
                 sum += i;
             }
         }
+
         return sum;
     }
 
-    public static int countEvenDigitsInNumber(int number) {
+    private static int countEvenDigitsInNumber(int number) {
         int[] arrayOfDigits = createArrayOfDigits(number);
         int countEvenDigits = 0;
+
         for (int arrayOfDigit : arrayOfDigits) {
             if (!isOdd(arrayOfDigit)) {
                 countEvenDigits++;
             }
         }
+
         return countEvenDigits;
     }
 
+    private static boolean isOddDigitsInNumber(int number) {
+        int[] arrayOfDigits = createArrayOfDigits(number);
+        int countOddDigits = 0;
+
+        for (int arrayOfDigit : arrayOfDigits) {
+            if (isOdd(arrayOfDigit)) {
+                countOddDigits++;
+            }
+        }
+
+        return (countOddDigits == arrayOfDigits.length);
+    }
 }

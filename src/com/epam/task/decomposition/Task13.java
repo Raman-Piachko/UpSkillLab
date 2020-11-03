@@ -7,13 +7,16 @@ public class Task13 {
         findTwinsNumbers(41);
     }
 
-    public static void findTwinsNumbers(int number) {
+    private static void findTwinsNumbers(int number) {
         for (int i = number; i <= number * 2; i++) {
-            for (int j = i; j < number * 2; j++) {
-                if (j - i == 2 && isPrimeNumber(i) && isPrimeNumber(j)) {
-                    System.out.println(i + "  " + j);
-                }
+            if (isNumberHasTwin(i)) {
+                System.out.printf("%d  %d\n", i, i + 2);
             }
         }
+    }
+
+    private static boolean isNumberHasTwin(int firstNumber) {
+        int secondNumber = firstNumber + 2;
+        return (secondNumber - firstNumber == 2 && isPrimeNumber(firstNumber) && isPrimeNumber(secondNumber));
     }
 }

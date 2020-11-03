@@ -1,12 +1,25 @@
 package com.epam.task.decomposition;
 
-import static com.epam.task.util.NumberUtils.findNOD;
-import static com.epam.task.util.NumberUtils.findNOK;
-
 public class Task1 {
 
     public static void main(String[] args) {
-        System.out.println(findNOD(18, 30));
-        System.out.println(findNOK(18, 30));
+        System.out.println(findNod(18, 30));
+        System.out.println(findNok(18, 30));
+    }
+
+    public static int findNod(int a, int b) {
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+
+        return a;
+    }
+
+    private static int findNok(int a, int b) {
+        return ((a * b) / findNod(a, b));
     }
 }
