@@ -1,5 +1,6 @@
 package com.epam.task.util;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import static com.epam.task.util.InputUtils.inputIntValue;
@@ -24,6 +25,20 @@ public class ArrayUtil {
         int temp = array[b];
         array[b] = array[a];
         array[a] = temp;
+    }
+
+    public static int[] filterArrayWithoutDuplicates(int[] array) {
+        int lengthOfRepeatingElements = array.length;
+        for (int i = 0; i < lengthOfRepeatingElements; i++) {
+            for (int j = i + 1; j < lengthOfRepeatingElements; j++) {
+                if (array[i] == array[j]) {
+                    array[j] = array[lengthOfRepeatingElements - 1];
+                    lengthOfRepeatingElements--;
+                    j--;
+                }
+            }
+        }
+        return Arrays.copyOf(array, lengthOfRepeatingElements);
     }
 
 }
