@@ -29,6 +29,7 @@ public class Task1 {
             }
         }
         formatToLowerCase(chars);
+
         return String.valueOf(chars);
     }
 

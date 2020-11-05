@@ -77,7 +77,6 @@ public class Task2 {
                 chars[i + 1] = 'e';
                 chars[i + 2] = 't';
                 chars[i + 3] = 't';
-
             }
         }
 
