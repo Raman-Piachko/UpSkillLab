@@ -9,7 +9,7 @@ public class Task1 {
         System.out.println(Arrays.toString(formatArrayOfStings));
     }
 
-    public static String[] formatArrayOfStings(String[] strings) {
+    private static String[] formatArrayOfStings(String[] strings) {
         for (int i = 0; i < strings.length; i++) {
             strings[i] = formatStringToSnakeCase(strings[i]);
         }
@@ -17,14 +17,14 @@ public class Task1 {
         return strings;
     }
 
-    public static String formatStringToSnakeCase(String sting) {
+    private static String formatStringToSnakeCase(String sting) {
         char[] chars = sting.toCharArray();
         int[] index = findIndex(chars);
 
         for (int i = index.length - 1; i >= 0; i--) {
             for (int j = chars.length - 1; j >= 0; j--) {
                 if (index[i] == j) {
-                    chars = insertCharacter(chars, j, '_');
+                    chars = insertChar(chars, j, '_');
                 }
             }
         }
@@ -33,24 +33,24 @@ public class Task1 {
         return String.valueOf(chars);
     }
 
-    public static char[] insertCharacter(char[] chars, int index, char val) {
+    public static char[] insertChar(char[] chars, int index, char val) {
 
-        char[] dest_Array = new char[chars.length + 1];
-        int j = 0;
+        char[] charsAfter = new char[chars.length + 1];
+        int step = 0;
 
-        for (int i = 0; i < dest_Array.length; i++) {
+        for (int i = 0; i < charsAfter.length; i++) {
             if (i == index) {
-                dest_Array[i] = val;
+                charsAfter[i] = val;
             } else {
-                dest_Array[i] = chars[j];
-                j++;
+                charsAfter[i] = chars[step];
+                step++;
             }
         }
-        System.out.println(Arrays.toString(dest_Array));
-        return dest_Array;
+
+        return charsAfter;
     }
 
-    public static int countIndex(char[] chars) {
+    private static int countIndex(char[] chars) {
         int count = 0;
 
         for (char aChar : chars) {
@@ -62,7 +62,7 @@ public class Task1 {
         return count;
     }
 
-    public static int[] findIndex(char[] chars) {
+    private static int[] findIndex(char[] chars) {
         int[] index = new int[countIndex(chars)];
         int step = 0;
 
@@ -70,7 +70,6 @@ public class Task1 {
             if (Character.isUpperCase(chars[i])) {
                 index[step] = i;
                 step++;
-
             }
         }
 
@@ -78,7 +77,7 @@ public class Task1 {
     }
 
 
-    public static void formatToLowerCase(char[] chars) {
+    private static void formatToLowerCase(char[] chars) {
         for (int i = 0; i < chars.length; i++) {
             chars[i] = Character.toLowerCase(chars[i]);
         }

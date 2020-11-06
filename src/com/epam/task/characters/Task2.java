@@ -1,11 +1,12 @@
 package com.epam.task.characters;
 
-import static com.epam.task.characters.Task1.insertCharacter;
+import static com.epam.task.characters.Task1.insertChar;
 
 public class Task2 {
     public static void main(String[] args) {
-        String string = "word word";
-        System.out.println(changeWordToLetter(string));
+        String word = "word ggsdgsd word";
+        String letter = changeWordToLetter(word);
+        System.out.println(letter);
     }
 
 
@@ -36,15 +37,14 @@ public class Task2 {
     }
 
 
-
-    public static String formatedStringToE(String sting) {
-        char[] chars = sting.toCharArray();
+    public static String insertCharacter(String string, int indexForInsert, char ch) {
+        char[] chars = string.toCharArray();
         int[] index = findIndexWord(chars);
 
         for (int i = index.length - 1; i >= 0; i--) {
             for (int j = chars.length - 1; j >= 0; j--) {
                 if (index[i] == j) {
-                    chars = insertCharacter(chars, j+4,'e');
+                    chars = insertChar(chars, j + indexForInsert, ch);
                 }
             }
         }
@@ -52,24 +52,14 @@ public class Task2 {
         return String.valueOf(chars);
     }
 
-    public static String formatedStringToER(String string) {
-        char[] chars = string.toCharArray();
-        int[] index = findIndexWord(chars);
-
-        for (int i = index.length - 1; i >= 0; i--) {
-            for (int j = chars.length - 1; j >= 0; j--) {
-                if (index[i] == j) {
-                    chars = insertCharacter(chars, j+5,'r');
-                }
-            }
-        }
-
-        return String.valueOf(chars);
+    public static String changeWordToWorder(String string) {
+        string = insertCharacter(string, 4, 'e');
+        return insertCharacter(string, 5, 'r');
     }
 
-    public static String changeWordToLett(String string) {
-        char[] chars = string.toCharArray();
-
+    public static String changeWordToLetter(String string) {
+        String stringForFormate = changeWordToWorder(string);
+        char[] chars = stringForFormate.toCharArray();
 
         for (int i = 0; i < chars.length - 4; i++) {
             if (chars[i] == 'w' && chars[i + 1] == 'o' && chars[i + 2] == 'r' && chars[i + 3] == 'd') {
@@ -82,13 +72,4 @@ public class Task2 {
 
         return String.valueOf(chars);
     }
-
-    public static  String changeWordToLetter(String string){
-        string=formatedStringToE(string);
-        string=formatedStringToER(string);
-
-        return changeWordToLett(string);
-    }
-
-
 }
