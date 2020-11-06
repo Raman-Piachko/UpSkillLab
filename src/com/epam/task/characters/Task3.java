@@ -12,8 +12,8 @@ public class Task3 {
         char[] chars = string.toCharArray();
         int count = 0;
 
-        for (char aChar : chars) {
-            if (Character.isDigit(aChar)) {
+        for (char value : chars) {
+            if (Character.isDigit(value)) {
                 count++;
             }
         }
