@@ -1,19 +1,21 @@
 package com.epam.task.characters;
 
-import static com.epam.task.characters.Task1.insertChar;
-
 public class Task2 {
+    private static final String LETTER = "letter";
+    private static final String WORD = "word";
+    private static final String STRING = "word ggsdgsd word";
+
     public static void main(String[] args) {
-        String word = "word ggsdgsd word";
-        String letter = changeWordToLetter(word);
-        System.out.println(letter);
+        System.out.println(STRING);
+        String stringAfterChange = convertWordToLetter(STRING);
+        System.out.println(stringAfterChange);
     }
 
-
-    public static int countIndexWord(char[] chars) {
+    private static int countIndexWord(char[] chars) {
         int count = 0;
-        for (int i = 0; i < chars.length - 3; i++) {
-            if (chars[i] == 'w' && chars[i + 1] == 'o' && chars[i + 2] == 'r' && chars[i + 3] == 'd') {
+        char[] word = WORD.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == word[0] && chars[i + 1] == word[1] && chars[i + 2] == word[2] && chars[i + 3] == word[3]) {
                 count++;
             }
         }
@@ -21,55 +23,32 @@ public class Task2 {
         return count;
     }
 
-    public static int[] findIndexWord(char[] chars) {
-        int[] index = new int[countIndexWord(chars)];
-        int step = 0;
+    private static String convertWordToLetter(String string) {
+        char[] arrayBefore = string.toCharArray();
+        char[] arrayAfter = new char[calculateNewArrayLength(string)];
+        char[] letter = LETTER.toCharArray();
+        char[] word = WORD.toCharArray();
+        int indexInNewArray = 0;
 
-        for (int i = 0; i < chars.length - 3; i++) {
-            if (chars[i] == 'w' && chars[i + 1] == 'o' && chars[i + 2] == 'r' && chars[i + 3] == 'd') {
-                index[step] = i;
-                step++;
+        for (int i = 0; i < arrayBefore.length; i++) {
+            if (arrayBefore[i] == word[0] && arrayBefore[i + 1] == word[1] && arrayBefore[i + 2] == word[2] && arrayBefore[i + 3] == word[3]) {
+                for (char value : letter) {
+                    arrayAfter[indexInNewArray] = value;
+                    indexInNewArray++;
 
-            }
-        }
-
-        return index;
-    }
-
-
-    public static String insertCharacter(String string, int indexForInsert, char ch) {
-        char[] chars = string.toCharArray();
-        int[] index = findIndexWord(chars);
-
-        for (int i = index.length - 1; i >= 0; i--) {
-            for (int j = chars.length - 1; j >= 0; j--) {
-                if (index[i] == j) {
-                    chars = insertChar(chars, j + indexForInsert, ch);
                 }
+                i = i + 3;
+            } else {
+                arrayAfter[indexInNewArray] = arrayBefore[i];
+                indexInNewArray++;
             }
         }
 
-        return String.valueOf(chars);
+        return String.valueOf(arrayAfter);
     }
 
-    public static String changeWordToWorder(String string) {
-        string = insertCharacter(string, 4, 'e');
-        return insertCharacter(string, 5, 'r');
-    }
-
-    public static String changeWordToLetter(String string) {
-        String stringForFormate = changeWordToWorder(string);
-        char[] chars = stringForFormate.toCharArray();
-
-        for (int i = 0; i < chars.length - 4; i++) {
-            if (chars[i] == 'w' && chars[i + 1] == 'o' && chars[i + 2] == 'r' && chars[i + 3] == 'd') {
-                chars[i] = 'l';
-                chars[i + 1] = 'e';
-                chars[i + 2] = 't';
-                chars[i + 3] = 't';
-            }
-        }
-
-        return String.valueOf(chars);
+    private static int calculateNewArrayLength(String string) {
+        char[] oldArray = string.toCharArray();
+        return oldArray.length + countIndexWord(oldArray) * 2;
     }
 }

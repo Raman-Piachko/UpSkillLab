@@ -1,9 +1,10 @@
 package com.epam.task.characters;
 
 public class Task3 {
+    private static final String STRING = "afas fasfaf97fas as5f5a 58fas";
+
     public static void main(String[] args) {
-        String string = "afas fasfaf97fas as5f5a 58fas";
-        int countOfDigitsInString = countDigitsInString(string);
+        int countOfDigitsInString = countDigitsInString(STRING);
         System.out.println(countOfDigitsInString);
     }
 

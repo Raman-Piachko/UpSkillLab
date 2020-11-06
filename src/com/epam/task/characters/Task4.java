@@ -1,11 +1,11 @@
 package com.epam.task.characters;
 
 public class Task4 {
+    private static final String STRING = "214 af8 faf6886s 90 gd 2";
+
     public static void main(String[] args) {
-        String string = "214 af8 faf6886s 90 gd 2";
-        int result = countNumbersInString(string);
-        System.out.println();
-        System.out.println(result);
+        int result = countNumbersInString(STRING);
+        System.out.println("\n" + result);
     }
 
     public static int countNumbersInString(String string) {

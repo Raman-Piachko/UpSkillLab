@@ -1,9 +1,10 @@
 package com.epam.task.characters;
 
 public class Task5 {
+    private static final String STRING = "  a as   af  sfs";
+
     public static void main(String[] args) {
-        String string = "  a as   af  sfs   ";
-        String stringAfterFormat = deleteTwinsSpaces(string);
+        String stringAfterFormat = deleteTwinsSpaces(STRING);
         System.out.println(stringAfterFormat);
     }
 

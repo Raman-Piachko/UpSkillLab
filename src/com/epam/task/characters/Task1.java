@@ -3,9 +3,11 @@ package com.epam.task.characters;
 import java.util.Arrays;
 
 public class Task1 {
+    private static final char SPACE = ' ';
+    private static final String[] STRING_ARRAY = {"charArrayAfsTfsfsY", "safAsffF"};
+
     public static void main(String[] args) {
-        String[] string = {"charArrayAfsTfsfsY", "safAsffF"};
-        String[] formatArrayOfStings = formatArrayOfStings(string);
+        String[] formatArrayOfStings = formatArrayOfStings(STRING_ARRAY);
         System.out.println(Arrays.toString(formatArrayOfStings));
     }
 
@@ -19,12 +21,12 @@ public class Task1 {
 
     private static String formatStringToSnakeCase(String sting) {
         char[] chars = sting.toCharArray();
-        int[] index = findIndex(chars);
+        int[] index = findUpperCaseIndexes(chars);
 
         for (int i = index.length - 1; i >= 0; i--) {
             for (int j = chars.length - 1; j >= 0; j--) {
                 if (index[i] == j) {
-                    chars = insertChar(chars, j, '_');
+                    chars = insertChar(chars, j, SPACE);
                 }
             }
         }
@@ -50,11 +52,11 @@ public class Task1 {
         return charsAfter;
     }
 
-    private static int countIndex(char[] chars) {
+    private static int countUpperCaseIndexes(char[] chars) {
         int count = 0;
 
-        for (char aChar : chars) {
-            if (Character.isUpperCase(aChar)) {
+        for (char value : chars) {
+            if (Character.isUpperCase(value)) {
                 count++;
             }
         }
@@ -62,8 +64,8 @@ public class Task1 {
         return count;
     }
 
-    private static int[] findIndex(char[] chars) {
-        int[] index = new int[countIndex(chars)];
+    private static int[] findUpperCaseIndexes(char[] chars) {
+        int[] index = new int[countUpperCaseIndexes(chars)];
         int step = 0;
 
         for (int i = 0; i < chars.length; i++) {
@@ -76,16 +78,9 @@ public class Task1 {
         return index;
     }
 
-
     private static void formatToLowerCase(char[] chars) {
         for (int i = 0; i < chars.length; i++) {
             chars[i] = Character.toLowerCase(chars[i]);
         }
     }
 }
-
-
-
-
-
-
