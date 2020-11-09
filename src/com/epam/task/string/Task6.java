@@ -8,13 +8,13 @@ public class Task6 {
     }
 
     public static String duplicateAllChars(String string) {
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuilder = new StringBuilder();
 
         for (int i = 0; i < string.length(); i++) {
             char charToTwins = string.charAt(i);
-            stringBuffer.append(charToTwins).append(charToTwins);
+            stringBuilder.append(charToTwins).append(charToTwins);
         }
 
-        return String.valueOf(stringBuffer);
+        return String.valueOf(stringBuilder);
     }
 }

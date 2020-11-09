@@ -17,8 +17,8 @@ public class Task9 {
         int countInUpperCase = 0;
 
         for (int i = 0; i < string.length(); i++) {
-            char temp = string.charAt(i);
-            if (temp >= FIRST_LATIN_CHAR_IN_UPPER_CASE && temp <= LAST_LATIN_CHAR_IN_UPPER_CASE) {
+            char letter = string.charAt(i);
+            if (letter >= FIRST_LATIN_CHAR_IN_UPPER_CASE && letter <= LAST_LATIN_CHAR_IN_UPPER_CASE) {
                 countInUpperCase++;
             }
         }
@@ -30,8 +30,8 @@ public class Task9 {
         int countInLowerCase = 0;
 
         for (int i = 0; i < string.length(); i++) {
-            char temp = string.charAt(i);
-            if (temp >= FIRST_LATIN_CHAR_IN_LOWER_CASE && temp <= LAST_LATIN_CHAR_IN_LOWER_CASE) {
+            char letter = string.charAt(i);
+            if (letter >= FIRST_LATIN_CHAR_IN_LOWER_CASE && letter <= LAST_LATIN_CHAR_IN_LOWER_CASE) {
                 countInLowerCase++;
             }
         }
