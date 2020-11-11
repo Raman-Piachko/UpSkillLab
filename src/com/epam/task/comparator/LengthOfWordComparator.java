@@ -1,9 +1,9 @@
-package com.epam.task.regex;
+package com.epam.task.comparator;
 
 import java.util.Comparator;
 
 public class LengthOfWordComparator implements Comparator<String> {
-    private String REGEX;
+    private final String REGEX;
 
     public LengthOfWordComparator(String REGEX) {
         this.REGEX = REGEX;

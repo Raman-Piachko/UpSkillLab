@@ -40,7 +40,7 @@ public class Task2 {
         Pattern closedTag = Pattern.compile(END_TAG);
         Pattern body = Pattern.compile(TAG_CONTENT);
         Pattern emptyTag = Pattern.compile(EMPTY);
-        StringBuilder stringBuffer = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
 
         String[] strings = string.split("\n\\s*");
 
@@ -50,19 +50,19 @@ public class Task2 {
             Matcher bodyMatcher = body.matcher(line);
             Matcher emptyMatcher = emptyTag.matcher(line);
             if (openMatcher.find()) {
-                stringBuffer.append(openMatcher.group()).append(RESULT_IS_OPENING_TAG);
+                stringBuilder.append(openMatcher.group()).append(RESULT_IS_OPENING_TAG);
             }
             if (bodyMatcher.find()) {
-                stringBuffer.append(bodyMatcher.group(1)).append(RESULT_IS_TAG_CONTENT);
+                stringBuilder.append(bodyMatcher.group(1)).append(RESULT_IS_TAG_CONTENT);
             }
             if (closedMatcher.find()) {
-                stringBuffer.append(closedMatcher.group()).append(RESULT_IS_END_TAG);
+                stringBuilder.append(closedMatcher.group()).append(RESULT_IS_END_TAG);
             }
             if (emptyMatcher.find()) {
-                stringBuffer.append(emptyMatcher.group()).append(RESULT_IS_EMPTY_TAG);
+                stringBuilder.append(emptyMatcher.group()).append(RESULT_IS_EMPTY_TAG);
             }
         }
 
-        return stringBuffer.toString();
+        return stringBuilder.toString();
     }
 }

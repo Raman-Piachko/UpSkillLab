@@ -1,4 +1,4 @@
-package com.epam.task.regex;
+package com.epam.task.comparator;
 
 import java.util.Comparator;
 

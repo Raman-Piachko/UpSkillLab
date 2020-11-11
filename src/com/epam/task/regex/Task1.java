@@ -1,8 +1,7 @@
 package com.epam.task.regex;
 
-import static com.epam.task.service.StringService.sortLexemeInCurrentSentence;
-import static com.epam.task.service.StringService.sortParagraphs;
-import static com.epam.task.service.StringService.sortWordsInSentenceByLength;
+import com.epam.task.service.StringService;
+
 import static com.epam.task.util.InputUtils.inputIntValue;
 
 public class Task1 {
@@ -17,19 +16,21 @@ public class Task1 {
             4-> exit the application.
             Your choice:\s""";
     private static final String WRONG_INPUT = "Wrong input, try again!";
+    private static final String EXIT = "Application closed";
 
     public static void main(String[] args) {
         runApp();
     }
 
     private static void runApp() {
+        StringService stringService = new StringService();
         int choice = inputIntValue(OPERATION_REQUEST);
 
         switch (choice) {
-            case (1) -> sortParagraphs(STRING);
-            case (2) -> sortWordsInSentenceByLength(STRING);
-            case (3) -> sortLexemeInCurrentSentence(STRING);
-            case (4) -> System.out.println("Application closed");
+            case (1) -> stringService.sortParagraphs(STRING);
+            case (2) -> stringService.sortWordsInSentenceByLength(STRING);
+            case (3) -> stringService.sortLexemeInCurrentSentence(STRING);
+            case (4) -> System.out.println(EXIT);
 
             default -> {
                 System.out.println(WRONG_INPUT);
