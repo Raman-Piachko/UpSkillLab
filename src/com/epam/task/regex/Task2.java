@@ -62,6 +62,7 @@ public class Task2 {
                 stringBuffer.append(emptyMatcher.group()).append(RESULT_IS_EMPTY_TAG);
             }
         }
+
         return stringBuffer.toString();
     }
 }

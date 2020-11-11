@@ -1,7 +1,7 @@
 package com.epam.task.regex;
 
 import static com.epam.task.service.StringService.sortLexemeInCurrentSentence;
-import static com.epam.task.service.StringService.sortParagraphsByNumberOfSentences;
+import static com.epam.task.service.StringService.sortParagraphs;
 import static com.epam.task.service.StringService.sortWordsInSentenceByLength;
 import static com.epam.task.util.InputUtils.inputIntValue;
 
@@ -26,7 +26,7 @@ public class Task1 {
         int choice = inputIntValue(OPERATION_REQUEST);
 
         switch (choice) {
-            case (1) -> sortParagraphsByNumberOfSentences(STRING);
+            case (1) -> sortParagraphs(STRING);
             case (2) -> sortWordsInSentenceByLength(STRING);
             case (3) -> sortLexemeInCurrentSentence(STRING);
             case (4) -> System.out.println("Application closed");
