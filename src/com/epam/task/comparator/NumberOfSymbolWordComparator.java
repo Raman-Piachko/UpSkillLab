@@ -6,16 +6,15 @@ import java.util.Comparator;
 
 public class NumberOfSymbolWordComparator implements Comparator<String> {
 
-    private static String symbol;
-
+    private String symbol;
+    private StringService stringService = new StringService();
 
     public NumberOfSymbolWordComparator(String symbol) {
-        NumberOfSymbolWordComparator.symbol = symbol;
+        this.symbol = symbol;
     }
 
     @Override
     public int compare(String firstString, String secondString) {
-        StringService stringService = new StringService();
         return Integer.compare(stringService.countNumberOfSymbol(secondString, symbol), stringService.countNumberOfSymbol(firstString, symbol));
     }
 

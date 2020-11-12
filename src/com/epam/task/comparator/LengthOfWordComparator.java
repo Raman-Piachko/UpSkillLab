@@ -3,10 +3,10 @@ package com.epam.task.comparator;
 import java.util.Comparator;
 
 public class LengthOfWordComparator implements Comparator<String> {
-    private final String REGEX;
+    private  String regex;
 
-    public LengthOfWordComparator(String REGEX) {
-        this.REGEX = REGEX;
+    public LengthOfWordComparator(String regex) {
+        this.regex = regex;
     }
 
     @Override

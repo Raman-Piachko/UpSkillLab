@@ -25,7 +25,9 @@ public class StringService {
 
     public void sortParagraphs(String text) {
         String[] paragraphs = text.split(PARAGRAPH);
-        Object[] sortedParagraphs = Arrays.stream(paragraphs).sorted(new ParagraphComparator(END_SENTENCE)).toArray();
+        Object[] sortedParagraphs = Arrays.stream(paragraphs)
+                .sorted(new ParagraphComparator(END_SENTENCE))
+                .toArray();
 
         printStringsArray(sortedParagraphs, PARAGRAPH);
     }
@@ -35,7 +37,9 @@ public class StringService {
 
         for (String sentence : sentences) {
             String[] words = sentence.trim().split(ALPHABETIC);
-            Object[] sortedSentences = Arrays.stream(words).sorted(new LengthOfWordComparator(ALPHABETIC)).toArray();
+            Object[] sortedSentences = Arrays.stream(words)
+                    .sorted(new LengthOfWordComparator(ALPHABETIC))
+                    .toArray();
 
             printStringsArray(sortedSentences, SPACE);
         }
@@ -44,7 +48,10 @@ public class StringService {
     private Object[] sortLexemeBySymbol(String string, String symbol) {
         String[] words = string.trim().split(ALPHABETIC);
 
-        return Arrays.stream(words).sorted(new NumberOfSymbolWordComparator(symbol)).sorted(new AlphabeticalComparator(symbol)).toArray();
+        return Arrays.stream(words)
+                .sorted(new NumberOfSymbolWordComparator(symbol))
+                .sorted(new AlphabeticalComparator(symbol))
+                .toArray();
     }
 
     public void sortLexemeInCurrentSentence(String text) {
