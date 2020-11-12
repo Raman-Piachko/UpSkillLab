@@ -41,10 +41,8 @@ public class StringService {
         }
     }
 
-
     private Object[] sortLexemeBySymbol(String string, String symbol) {
         String[] words = string.trim().split(ALPHABETIC);
-        System.out.println(Arrays.toString(words));
 
         return Arrays.stream(words).sorted(new NumberOfSymbolWordComparator(symbol)).sorted(new AlphabeticalComparator(symbol)).toArray();
     }
@@ -59,7 +57,6 @@ public class StringService {
 
         printStringsArray(sortedWords, SPACE);
     }
-
 
     public int countNumberOfSymbol(String string, String regex) {
         Pattern p = Pattern.compile(regex);

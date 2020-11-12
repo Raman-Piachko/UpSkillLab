@@ -10,5 +10,4 @@ public class StringUtils {
 
         System.out.println(stringBuilder.toString());
     }
-
 }

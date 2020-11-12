@@ -2,12 +2,13 @@ package com.epam.task.regex;
 
 import com.epam.task.service.StringService;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 import static com.epam.task.util.InputUtils.inputIntValue;
 
 public class Task1 {
-    private static final String STRING = "А ведь действительно,  правильно писать база акак? Многие авторы (и я тоже, иногда, в этом повинен) не много внимания уделяют правильности составления абзаца. Не говоря уже, о его размерах и структуре.\n"
-            + "В прошлой статье, о структуре излагаемого материала, я вскользь упоминал об абзацах. Но, данной теме, стоит посвятить отдельную статью.";
-
     private static final String OPERATION_REQUEST = """
             Please select number an operation :
             1-> sort paragraphs by number of sentences;
@@ -17,21 +18,23 @@ public class Task1 {
             Your choice:\s""";
     private static final String WRONG_INPUT = "Wrong input, try again!";
     private static final String EXIT = "Application closed";
+    private static final String PATH = "src/com/epam/task/regex/Text.txt";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         runApp();
     }
 
-    private static void runApp() {
+    private static void runApp() throws IOException {
+        Path path = Path.of(PATH);
+        String text = new String(Files.readAllBytes(path));
         StringService stringService = new StringService();
         int choice = inputIntValue(OPERATION_REQUEST);
 
         switch (choice) {
-            case (1) -> stringService.sortParagraphs(STRING);
-            case (2) -> stringService.sortWordsInSentenceByLength(STRING);
-            case (3) -> stringService.sortLexemeInCurrentSentence(STRING);
+            case (1) -> stringService.sortParagraphs(text);
+            case (2) -> stringService.sortWordsInSentenceByLength(text);
+            case (3) -> stringService.sortLexemeInCurrentSentence(text);
             case (4) -> System.out.println(EXIT);
-
             default -> {
                 System.out.println(WRONG_INPUT);
                 runApp();
