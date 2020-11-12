@@ -27,6 +27,12 @@ public class ArrayUtil {
         array[a] = temp;
     }
 
+    public static void swapElementsObjectArray(Object[] objects, int a, int b) {
+        Object value = objects[a];
+        objects[a] = objects[b];
+        objects[b] = value;
+    }
+
     public static int[] filterArrayWithoutDuplicates(int[] array) {
         int lengthOfRepeatingElements = array.length;
         for (int i = 0; i < lengthOfRepeatingElements; i++) {
